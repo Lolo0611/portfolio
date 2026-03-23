@@ -1,9 +1,11 @@
 import { Card } from "@/app/_components/Card"
-import { Badge } from "@/app/_components"
+import { Badge, SectionTitle } from "@/app/_components"
 
 export const PortfolioSection = () => {
   return (
-    <div className={"bg-red-400"}>
+    <div className={"mx-auto text-center"}>
+      <SectionTitle title="Portfolio" subTitle="Mes derniers projets" />
+
       <div className={"z-10 container mx-auto flex flex-col gap-4 px-6 py-6"}>
         <h2 className={"text-2xl font-semibold"}>Projets réalisés</h2>
         <p>

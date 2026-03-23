@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProviders>
-          <main className="bg-white text-slate-900 dark:bg-[#BEA2E0] dark:text-white">
+          <main className="bg-white text-slate-900 dark:text-white">
             <Navigation />
             {children}
             <Footer />

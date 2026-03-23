@@ -6,6 +6,7 @@ import {
   ButtonVariants,
   Divider,
   sections,
+  SectionTitle,
 } from "@/app/_components"
 import {
   ArrowRight,
@@ -24,7 +25,7 @@ export const ProfileSection = () => {
     >
       <div className="relative z-10 container mx-auto mt-24 flex flex-row gap-3 px-6 md:flex-row-reverse">
         <Image
-          className={"mx-auto h-48 w-48 rounded-full"}
+          className={"mx-auto h-96 w-96 flex-shrink-0 rounded-full"}
           src="/laura.jpeg"
           width={256}
           height={256}
@@ -36,9 +37,9 @@ export const ProfileSection = () => {
             Bonjour, Je suis{" "}
             <span className={"text-purple font-bold"}>Laura SCOLAN</span>
             <br />
-            <span className={"text-2xl"}>
+            <span className={"text-4xl"}>
               Développeuse{" "}
-              <span className={"text-purple font-semibold"}>
+              <span className={"text-purple text-4xl font-semibold"}>
                 Web Front-end spécialisée en React et Next.js
               </span>
             </span>
@@ -46,7 +47,7 @@ export const ProfileSection = () => {
 
           <Divider color="bg-medium-purple" />
 
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed">
+          <p className="max-w-2xl text-lg leading-relaxed">
             Praesent lobortis eleifend rhoncus. Nunc sit amet enim vel lacus
             hendrerit imperdiet. Proin ipsum mi, posuere at mauris in, lacinia
             consectetur eros.Praesent lobortis eleifend rhoncus.

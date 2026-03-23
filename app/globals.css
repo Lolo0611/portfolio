@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
 @import "tailwindcss";
 @import "./theme.css";
 
 :root {
   --font-primary : 'Inter', sans-serif;
-  --font-secondayry : 'Londrina Shadow';
+  --font-secondary : 'Londrina Shadow', sans-serif;
 }
 
 body {
   font-family: var(--font-primary), sans-serif;
-  font-weight: var(--font-weight-regular);
+}
+
+@theme {
+  --font-londrina: var(--font-secondary), sans-serif;
 }

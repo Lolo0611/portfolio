@@ -52,11 +52,11 @@ export const Navigation = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <a
             href="#profile"
             onClick={(e) => handleNavClick(e, "#profile")}
-            className="from-purple to-medium-purple bg-gradient-to-r bg-clip-text text-xl font-extrabold text-transparent"
+            className="from-purple to-medium-purple bg-gradient-to-r bg-clip-text text-4xl font-extrabold text-transparent"
           >
             LS
           </a>
@@ -67,7 +67,7 @@ export const Navigation = () => {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-purple hover:bg-light-purple rounded-md px-4 py-2 text-sm font-bold transition-colors"
+                className="text-purple hover:bg-light-purple rounded-md px-4 py-2 text-lg font-bold transition-colors"
               >
                 {item.label}
               </a>
