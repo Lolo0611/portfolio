@@ -1,5 +1,5 @@
 import { Card } from "@/app/_components/Card"
-import { Badge, SectionTitle } from "@/app/_components"
+import { SectionTitle } from "@/app/_components"
 
 export const PortfolioSection = () => {
   return (
@@ -15,25 +15,37 @@ export const PortfolioSection = () => {
 
         <div
           className={
-            "flex flex-col items-center gap-8 overflow-y-scroll md:flex-row"
+            "flex flex-col items-center gap-8 overflow-y-scroll lg:flex-row"
           }
         >
           <Card
-            source={"/unilabs.png"}
-            title={"Site grand public - Unilabs"}
-            description={"Réalisation d'un site web pour l'entreprise Unilabs."}
+            source={"/burgerKing.png"}
+            title={"Site e-commerce"}
+            subTitle={"Burger King France"}
+            description={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere tellus nulla, ac gravida arcu lacinia eget. Maecenas hendrerit vel nulla sit amet tempor. "
+            }
+            chips={["Next.js", "React", "React Native"]}
+            projectUrl={"https://www.burgerking.fr/"}
           />
           <Card
             source={"/unilabs.png"}
-            title={"Site grand public - Unilabs"}
-            description={"Réalisation d'un site web pour l'entreprise Unilabs."}
-            footerCard={
-              <>
-                <Badge text={"React"} />
-                <Badge text={"Next.js"} />
-                <Badge text={"Nest.js"} />
-              </>
+            title={"Site grand public"}
+            subTitle={"Unilabs"}
+            description={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere tellus nulla, ac gravida arcu lacinia eget. Maecenas hendrerit vel nulla sit amet tempor. "
             }
+            chips={["Next.js", "Nest.js"]}
+            projectUrl="https://my-unilabs.fr/"
+          />
+          <Card
+            source={"/itsuFrance.png"}
+            title={"Site vitrine"}
+            subTitle={"Itsu France"}
+            description={
+              "Réalisation d'un site vitrine statique pour Itsu France. Site vitrine statique avec possibilité de consulter les menus"
+            }
+            chips={["React", "Next.js"]}
           />
         </div>
       </div>

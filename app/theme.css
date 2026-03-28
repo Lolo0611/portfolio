@@ -3,8 +3,10 @@
 @theme {
     --color-*: initial;
     --color-white: #FFFFFF;
+    --color-black: #000000;
     --color-purple: #8A57C9;
     --color-medium-purple: #C5ADE3;
+    --color-very-light-purple: #F5F0FA;
     --color-grey: #3C3C3C;
     --color-light-purple: #F8F2FF;
     --color-dark-grey: #4C4C4C;

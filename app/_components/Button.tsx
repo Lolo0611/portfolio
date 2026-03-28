@@ -20,7 +20,7 @@ export const buttonVariants = {
 }
 
 export const buttonSizes = {
-  small: "px-2 py-1 text-sm",
+  small: "px-3 py-2 text-sm",
   medium: "px-4 py-3 text-base",
   large: "px-6 py-3 text-lg",
 }
