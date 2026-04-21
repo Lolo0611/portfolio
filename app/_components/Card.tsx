@@ -49,7 +49,7 @@ export const Card = ({
             )}
           </div>
 
-          <div className={"mb-4 flex flex-col gap-2"}>
+          <div className={"flex flex-col gap-2"}>
             <p className={"text-sm"}>{description}</p>
             {chips && (
               <div>

@@ -1,10 +1,26 @@
+"use client"
+
+import {
+  Button,
+  ButtonVariants,
+  SectionTitle,
+  SectionTitleVariants,
+} from "@/app/_components"
+
 export const ExperiencesSection = () => {
   return (
     <section>
-      <div className="bg-#BEA2E0 py-8 text-white">
-        <div className="container mx-auto my-12 flex flex-col items-start md:my-24 md:flex-row">
-          <div className="sticky mt-2 flex w-full flex-col px-8 md:top-36 md:mt-12 lg:w-1/3">
-            <p className="tracking-loose ml-2 text-yellow-300 uppercase">
+      <div className="bg-purple py-8 text-white">
+        <div className={"mt-2 text-center"}>
+          <SectionTitle
+            title="Portfolio"
+            subTitle="Mes derniers projets"
+            variant={SectionTitleVariants.DARK_BACKGROUND}
+          />
+        </div>
+        <div className="container mx-auto my-12 flex flex-col items-start md:flex-row">
+          <div className="sticky mt-2 flex w-full flex-col px-8 md:mt-12 lg:w-1/3">
+            <p className="tracking-loose text-yellow-300 uppercase">
               Working Process
             </p>
             <p className="mb-2 text-3xl leading-normal md:text-4xl md:leading-relaxed">
@@ -14,12 +30,13 @@ export const ExperiencesSection = () => {
               Here’s your guide to the tech fest 2021 process. Go through all
               the steps to know the exact process of the fest.
             </p>
-            <a
-              href="#"
-              className="mr-auto rounded border border-yellow-300 bg-transparent px-4 py-2 text-yellow-300 shadow hover:border-transparent hover:bg-yellow-300 hover:text-white hover:shadow-lg"
+
+            <Button
+              onClick={() => console.log("download CV")}
+              variant={ButtonVariants.SECONDARY}
             >
-              Explore Now
-            </a>
+              Télécharger CV
+            </Button>
           </div>
           <div className="sticky ml-0 md:ml-12 lg:w-2/3">
             <div className="container mx-auto h-full w-full">

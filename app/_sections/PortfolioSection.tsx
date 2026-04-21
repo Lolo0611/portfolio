@@ -4,15 +4,11 @@ import { SectionTitle } from "@/app/_components"
 export const PortfolioSection = () => {
   return (
     <div className={"mx-auto text-center"}>
-      <SectionTitle title="Portfolio" subTitle="Mes derniers projets" />
+      <div className={"mt-2"}>
+        <SectionTitle title="Portfolio" subTitle="Mes derniers projets" />
+      </div>
 
       <div className={"z-10 container mx-auto flex flex-col gap-4 px-6 py-6"}>
-        <h2 className={"text-2xl font-semibold"}>Projets réalisés</h2>
-        <p>
-          Voici quelques-uns de mes travaux récents illustrant mes compétences
-          en développement web, en conception et en résolution de problèmes.
-        </p>
-
         <div
           className={
             "flex flex-col items-center gap-8 overflow-y-scroll lg:flex-row"
