@@ -1,6 +1,6 @@
 type StackCardProps = {
-  width: number
-  height: number
+  width?: number
+  height?: number
   content: React.ReactNode
 }
 
@@ -15,7 +15,7 @@ export const StackCard = ({ width, height, content }: StackCardProps) => {
         style={{ width, height }}
         className="bg-medium-purple relative flex rounded-lg p-2 text-slate-300"
       >
-        Gradient shadow
+        {content}
       </div>
     </div>
   )

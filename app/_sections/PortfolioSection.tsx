@@ -1,17 +1,18 @@
 import { Card } from "@/app/_components/Card"
 import { SectionTitle } from "@/app/_components"
+import { id } from "@/app/_components/navigation/section"
 
 export const PortfolioSection = () => {
   return (
-    <div className={"mx-auto text-center"}>
-      <div className={"mt-2"}>
+    <section id={id.PORTFOLIO} className={"mx-auto my-10 text-center"}>
+      <div className={"my-5"}>
         <SectionTitle title="Portfolio" subTitle="Mes derniers projets" />
       </div>
 
       <div className={"z-10 container mx-auto flex flex-col gap-4 px-6 py-6"}>
         <div
           className={
-            "flex flex-col items-center gap-8 overflow-y-scroll lg:flex-row"
+            "flex flex-col items-center justify-center gap-8 overflow-y-scroll lg:flex-row"
           }
         >
           <Card
@@ -19,7 +20,7 @@ export const PortfolioSection = () => {
             title={"Site e-commerce"}
             subTitle={"Burger King France"}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere tellus nulla, ac gravida arcu lacinia eget. Maecenas hendrerit vel nulla sit amet tempor. "
+              "Développement des applications Web & Mobile de Burger King France."
             }
             chips={["Next.js", "React", "React Native"]}
             projectUrl={"https://www.burgerking.fr/"}
@@ -29,7 +30,7 @@ export const PortfolioSection = () => {
             title={"Site grand public"}
             subTitle={"Unilabs"}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere tellus nulla, ac gravida arcu lacinia eget. Maecenas hendrerit vel nulla sit amet tempor. "
+              "Développement d'un site internet Grand Public répertoriant l’ensemble des informations sur les laboratoires appartenant au groupe Unilabs. Ajout d'un module de paiement en ligne."
             }
             chips={["Next.js", "Nest.js"]}
             projectUrl="https://my-unilabs.fr/"
@@ -45,6 +46,6 @@ export const PortfolioSection = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

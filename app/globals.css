@@ -14,3 +14,8 @@ body {
 @theme {
   --font-londrina: var(--font-secondary), sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}

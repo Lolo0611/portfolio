@@ -1,6 +1,7 @@
 "use client"
 
 import { ReactNode } from "react"
+import Link from "next/link"
 
 export enum ButtonVariants {
   PRIMARY = "primary",
@@ -29,8 +30,9 @@ export type ButtonProps = {
   variant?: ButtonVariants
   size?: ButtonSizes
   className?: string
-  onClick: () => void
+  onClick?: (e?: any) => void
   children?: ReactNode
+  href?: string
 }
 
 export const Button = ({
@@ -39,6 +41,7 @@ export const Button = ({
   onClick,
   children,
   className,
+  href,
 }: ButtonProps) => {
   const baseStyles =
     "font-semibold rounded transition-colors flex items-center gap-1 rounded-2xl w-fit hover:cursor-pointer"
@@ -46,11 +49,22 @@ export const Button = ({
   const sizeStyles = buttonSizes[size]
 
   return (
-    <button
-      className={`${baseStyles} ${variantStyles} ${sizeStyles} ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    <>
+      {href ? (
+        <Link
+          className={`${baseStyles} ${variantStyles} ${sizeStyles} ${className}`}
+          href={href}
+        >
+          {children}
+        </Link>
+      ) : (
+        <button
+          className={`${baseStyles} ${variantStyles} ${sizeStyles} ${className}`}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      )}
+    </>
   )
 }

@@ -6,15 +6,15 @@ import {
   SectionTitle,
   SectionTitleVariants,
 } from "@/app/_components"
+import { id } from "@/app/_components/navigation/section"
 
 export const ExperiencesSection = () => {
   return (
-    <section>
+    <section id={id.EXPERIENCE}>
       <div className="bg-purple py-8 text-white">
         <div className={"mt-2 text-center"}>
           <SectionTitle
-            title="Portfolio"
-            subTitle="Mes derniers projets"
+            title="Experiences & Formations"
             variant={SectionTitleVariants.DARK_BACKGROUND}
           />
         </div>
@@ -47,31 +47,36 @@ export const ExperiencesSection = () => {
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-yellow-300">
-                      1-6 May, 2021
+                      2019 - 2022
                     </p>
                     <h4 className="mb-3 text-lg font-bold md:text-2xl">
-                      Registration
+                      Formation d'ingénieur en cognitique
                     </h4>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">ENSC</h4>
                     <p className="text-opacity-100 text-sm leading-snug text-gray-50 md:text-base">
-                      Pick your favourite event(s) and register in that event by
-                      filling the form corresponding to that event. Its that
-                      easy :)
+                      Cognitique, Ergonomie, UI/UX Design
+                      <br />
+                      Fondamentaux de l'informatique et des langages de
+                      programmation <br />
+                      Méthode pour l’ingénieur : gestion de projets,
+                      méthodologie agile, travaux en équipe
                     </p>
                   </div>
                 </div>
                 <div className="right-timeline mb-8 flex w-full items-center justify-between">
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-left">
-                    <p className="mb-3 text-base text-yellow-300">
-                      6-9 May, 2021
-                    </p>
+                    <p className="mb-3 text-base text-yellow-300">2021</p>
                     <h4 className="mb-3 text-lg font-bold md:text-2xl">
-                      Participation
+                      Maîtrise en informatique
+                    </h4>
+                    <h4 className="mb-3 text-lg font-bold md:text-2xl">
+                      Université de Sherbrooke
                     </h4>
                     <p className="text-opacity-100 text-sm leading-snug text-gray-50 md:text-base">
-                      Participate online. The links for your registered events
-                      will be sent to you via email and whatsapp groups. Use
-                      those links and show your talent.
+                      Application Internet & Accessibilité du web: React.JS,
+                      Node.Js, Express
+                      <br /> Notions de cryptographie
                     </p>
                   </div>
                 </div>
@@ -79,7 +84,6 @@ export const ExperiencesSection = () => {
                   <div className="order-1 w-5/12"></div>
                   <div className="order-1 w-5/12 px-1 py-4 text-right">
                     <p className="mb-3 text-base text-yellow-300">
-                      {" "}
                       10 May, 2021
                     </p>
                     <h4 className="mb-3 text-lg font-bold md:text-2xl">

@@ -12,6 +12,7 @@ type CardProps = {
   source: string
   chips?: string[]
   projectUrl?: string
+  onClick?: () => void
 }
 
 export const Card = ({
@@ -21,6 +22,7 @@ export const Card = ({
   source,
   chips,
   projectUrl,
+  onClick,
 }: CardProps) => {
   return (
     <div
@@ -64,14 +66,16 @@ export const Card = ({
         </div>
 
         <div className={"gap flex flex-row items-end justify-between"}>
-          <Button
-            variant={ButtonVariants.PRIMARY}
-            size={ButtonSizes.SMALL}
-            onClick={() => console.log("test")}
-          >
-            En savoir plus
-            <MoveRightIcon size={16} />
-          </Button>
+          {onClick && (
+            <Button
+              variant={ButtonVariants.PRIMARY}
+              size={ButtonSizes.SMALL}
+              onClick={() => console.log("test")}
+            >
+              En savoir plus
+              <MoveRightIcon size={16} />
+            </Button>
+          )}
 
           {projectUrl && (
             <a href={projectUrl} className="text-purple text-s underline">

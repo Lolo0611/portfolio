@@ -1,26 +1,14 @@
 "use client"
 
-import {
-  Button,
-  ButtonSizes,
-  ButtonVariants,
-  Divider,
-  sections,
-  SectionTitle,
-} from "@/app/_components"
-import {
-  ArrowRight,
-  GithubIcon,
-  LinkedinIcon,
-  MailIcon,
-  TwitterIcon,
-} from "lucide-react"
+import { Button, ButtonSizes, ButtonVariants, Divider } from "@/app/_components"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { id, sections } from "@/app/_components/navigation/section"
 
 export const ProfileSection = () => {
   return (
     <section
-      id="profile"
+      id={id.PROFILE}
       className="bg-light-purple text-grey relative flex min-h-screen items-center justify-center overflow-hidden"
     >
       <div className="relative z-10 container mx-auto mt-24 flex flex-row gap-3 px-6 md:flex-row-reverse">
@@ -48,15 +36,15 @@ export const ProfileSection = () => {
           <Divider color="bg-medium-purple" />
 
           <p className="max-w-2xl text-lg leading-relaxed">
-            Praesent lobortis eleifend rhoncus. Nunc sit amet enim vel lacus
-            hendrerit imperdiet. Proin ipsum mi, posuere at mauris in, lacinia
-            consectetur eros.Praesent lobortis eleifend rhoncus.
+            Développeuse Front-end spécialisée en React, Next.js et React Native
+            avec une expérience confirmée sur des projets grand public. Habituée
+            à prendre en charge un projet de l’architecture au développement
+            jusqu’à la mise en production.
           </p>
           <Button
             size={ButtonSizes.MEDIUM}
             variant={ButtonVariants.PRIMARY}
             onClick={() => {
-              console.log("todo")
               const element = document.querySelector(sections.PORTFOLIO)
               element?.scrollIntoView({ behavior: "smooth" })
             }}
