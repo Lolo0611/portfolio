@@ -12,7 +12,7 @@ export const PortfolioSection = () => {
       <div className={"z-10 container mx-auto flex flex-col gap-4 px-6 py-6"}>
         <div
           className={
-            "flex flex-col items-center justify-center gap-8 overflow-y-scroll lg:flex-row"
+            "flex flex-col items-center justify-center gap-12 overflow-y-scroll lg:flex-row"
           }
         >
           <Card

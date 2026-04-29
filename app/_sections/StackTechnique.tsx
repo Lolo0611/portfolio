@@ -1,6 +1,7 @@
 import { SectionTitle } from "@/app/_components"
 import { StackCard } from "@/app/_components/StackCard"
 import { id } from "@/app/_components/navigation/section"
+import { STACK_TECHNIQUE_CONTENT } from "@/app/_components/content/StackTechnique"
 
 export const StackTechnique = () => {
   return (
@@ -11,11 +12,9 @@ export const StackTechnique = () => {
 
       {/* MOBILE */}
       <div className="mt-10 grid grid-cols-1 gap-6 md:hidden">
-        <StackCard content={<div>FRONTEND</div>} />
-        <StackCard content={<div>BACKEND</div>} />
-        <StackCard content={<div>DEVOPS & INFRA</div>} />
-        <StackCard content={<div>DATA & STORAGE</div>} />
-        <StackCard content={<div>DESIGN & UX</div>} />
+        {Object.entries(STACK_TECHNIQUE_CONTENT).map(([title, content]) => (
+          <StackCard key={title} content={content} />
+        ))}
       </div>
 
       {/* DESKTOP */}
@@ -24,23 +23,31 @@ export const StackTechnique = () => {
           <StackCard
             width={324}
             height={133}
-            content={<div>DATA & STORAGE</div>}
+            content={STACK_TECHNIQUE_CONTENT["Data & Storage"]}
           />
           <StackCard
             width={234}
             height={184}
-            content={<div>DEVOPS & INFRA</div>}
+            content={STACK_TECHNIQUE_CONTENT["DevOps & Infra"]}
           />
         </div>
 
-        <StackCard width={305} height={413} content={<div>FRONTEND</div>} />
+        <StackCard
+          width={305}
+          height={413}
+          content={STACK_TECHNIQUE_CONTENT.Frontend}
+        />
 
         <div className="flex flex-col gap-6">
-          <StackCard width={347} height={153} content={<div>BACKEND</div>} />
+          <StackCard
+            width={347}
+            height={153}
+            content={STACK_TECHNIQUE_CONTENT.Backend}
+          />
           <StackCard
             width={244}
             height={228}
-            content={<div>DESIGN & UX</div>}
+            content={STACK_TECHNIQUE_CONTENT["Design & UX"]}
           />
         </div>
       </div>

@@ -1,7 +1,5 @@
 import { SectionTitle } from "@/app/_components"
-import LinkedinIcon from "@/public/linkedinIcon.svg"
-import Image from "next/image"
-import { MailIcon, MapPin, PhoneIcon } from "lucide-react"
+import { Linkedin, MailIcon, MapPin } from "lucide-react"
 import { id } from "@/app/_components/navigation/section"
 
 export const ContactSection = () => {
@@ -16,43 +14,36 @@ export const ContactSection = () => {
         <div className="flex flex-col gap-12 md:flex-row">
           {/* LEFT - Infos */}
           <div className="flex flex-1 flex-col gap-6 text-gray-700">
-            <h3 className="text-xl font-semibold">Laissez-moi un message</h3>
+            <h3 className="text-xl font-semibold">
+              Et si on restait en contact?
+            </h3>
 
             <p className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque posuere tellus nulla, ac gravida arcu lacinia eget.
-              Maecenas hendrerit vel nulla sit amet tempor.
+              Vous avez une opportunité ou un poste à proposer ?
+              <br /> N’hésitez pas à me contacter, je serais ravie d’échanger
+              avec vous.
             </p>
 
             <div className="mt-4 flex flex-col gap-4">
-              <a href="#" className="hover:text-purple flex items-center gap-3">
-                <Image
-                  src={LinkedinIcon}
-                  width={20}
-                  height={20}
-                  alt="LinkedIn"
-                />
+              <a
+                href={"www.linkedin.com/in/laura-scolan-7768801ab"}
+                className="hover:text-purple flex items-center gap-3"
+              >
+                <Linkedin className="h-5 w-5" />
+
                 <span>Mon LinkedIn</span>
               </a>
 
               <a
-                href="tel:0600000000"
+                href="mailto:scolan.laura@gmail.com"
                 className="hover:text-purple flex items-center gap-3"
               >
-                <PhoneIcon size={18} />
-                <span>06 00 00 00 00</span>
-              </a>
-
-              <a
-                href="mailto:contact@email.com"
-                className="hover:text-purple flex items-center gap-3"
-              >
-                <MailIcon size={18} />
-                <span>contact@email.com</span>
+                <MailIcon className="h-5 w-5" />
+                <span>scolan.laura@gmail.com</span>
               </a>
 
               <div className="flex items-center gap-3">
-                <MapPin size={18} />
+                <MapPin className="h-5 w-5" />
                 <span>Paris, France</span>
               </div>
             </div>
@@ -65,7 +56,7 @@ export const ContactSection = () => {
                 <label className="mb-1 text-sm text-gray-700">Nom</label>
                 <input
                   type="text"
-                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 focus:ring-2 focus:outline-none"
+                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:ring-2 focus:outline-none"
                   placeholder="Votre nom"
                 />
               </div>
@@ -74,7 +65,7 @@ export const ContactSection = () => {
                 <label className="mb-1 text-sm text-gray-700">Email</label>
                 <input
                   type="email"
-                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 focus:ring-2 focus:outline-none"
+                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:ring-2 focus:outline-none"
                   placeholder="Votre email"
                 />
               </div>
@@ -83,7 +74,7 @@ export const ContactSection = () => {
                 <label className="mb-1 text-sm text-gray-700">Message</label>
                 <textarea
                   rows={5}
-                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 focus:ring-2 focus:outline-none"
+                  className="focus:ring-purple focus:border-purple w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:ring-2 focus:outline-none"
                   placeholder="Votre message..."
                 />
               </div>

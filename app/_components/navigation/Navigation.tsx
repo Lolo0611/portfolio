@@ -3,16 +3,8 @@
 import { useEffect, useState } from "react"
 import { Button, ButtonSizes, ButtonVariants } from "@/app/_components"
 import { Menu, X } from "lucide-react"
-import { sections } from "@/app/_components/navigation/section"
+import { navItems, sections } from "@/app/_components/navigation/section"
 import Link from "next/link"
-
-const navItems = [
-  { label: "Profil", href: sections.PROFILE },
-  { label: "Portfolio", href: sections.PORTFOLIO },
-  { label: "Experience & Formation", href: sections.EXPERIENCE },
-  { label: "Stack technique", href: sections.TECH_STACK },
-  { label: "Contact", href: sections.CONTACT },
-]
 
 export const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

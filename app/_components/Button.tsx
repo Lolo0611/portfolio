@@ -17,7 +17,7 @@ export enum ButtonSizes {
 export const buttonVariants = {
   primary: "bg-purple text-white hover:bg-medium-purple border-purple",
   secondary:
-    "text-purple bg-light-purple hover:bg-light-purple border-purple border-2",
+    "text-purple bg-light-purple hover:bg-medium-purple border-purple border-2",
 }
 
 export const buttonSizes = {
@@ -33,6 +33,7 @@ export type ButtonProps = {
   onClick?: (e?: any) => void
   children?: ReactNode
   href?: string
+  download?: string
 }
 
 export const Button = ({
@@ -42,6 +43,7 @@ export const Button = ({
   children,
   className,
   href,
+  download,
 }: ButtonProps) => {
   const baseStyles =
     "font-semibold rounded transition-colors flex items-center gap-1 rounded-2xl w-fit hover:cursor-pointer"
@@ -54,6 +56,7 @@ export const Button = ({
         <Link
           className={`${baseStyles} ${variantStyles} ${sizeStyles} ${className}`}
           href={href}
+          download={download}
         >
           {children}
         </Link>
