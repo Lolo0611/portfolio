@@ -18,8 +18,8 @@ export const Content = ({
   title,
 }: ContentProps) => {
   return (
-    <div>
-      <div className="flex flex-row gap-3 bg-blue-500 pt-5">
+    <div className="">
+      <div className="flex flex-row gap-3 md:pt-5">
         {icon}
 
         <div>
@@ -33,9 +33,9 @@ export const Content = ({
         </div>
       </div>
 
-      <div className="w-full bg-red-500">
+      <div className="w-full">
         {iconList && (
-          <div className="mt-10 grid grid-cols-3 gap-6">
+          <div className="mx-10 mt-5 flex flex-wrap justify-center gap-8 md:mt-20">
             {iconList.map(
               ({ component: Icon, size = 35, color = "purple" }, i) => (
                 <Icon key={i} size={size} color={color} />

@@ -28,7 +28,7 @@ export const Navigation = () => {
         <div className="flex h-20 items-center justify-between">
           <Link
             href={sections.PROFILE}
-            className="from-purple to-medium-purple bg-gradient-to-r bg-clip-text text-4xl font-extrabold text-transparent"
+            className="from-purple to-medium-purple bg-linear-to-r bg-clip-text text-4xl font-extrabold text-transparent"
           >
             LS
           </Link>

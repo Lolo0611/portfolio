@@ -22,7 +22,7 @@ export const StackTechnique = () => {
         <div className="flex flex-col items-end gap-6">
           <StackCard
             width={324}
-            height={133}
+            height={153}
             content={STACK_TECHNIQUE_CONTENT["Data & Storage"]}
           />
           <StackCard

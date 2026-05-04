@@ -7,8 +7,9 @@ import {
   TypeScriptIcon,
 } from "@/app/_components/icons"
 import { Content } from "@/app/_components/content/Content"
+import { ReactNode } from "react"
 
-export const STACK_TECHNIQUE_CONTENT: Record<string, React.ReactNode> = {
+export const STACK_TECHNIQUE_CONTENT: Record<string, ReactNode> = {
   Frontend: (
     <Content
       icon={
