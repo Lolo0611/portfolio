@@ -1,7 +1,7 @@
 import { SectionTitle } from "@/app/_components"
 import { StackCard } from "@/app/_components/StackCard"
 import { id } from "@/app/_components/navigation/section"
-import { STACK_TECHNIQUE_CONTENT } from "@/app/_components/content/StackTechnique"
+import { STACK_TECHNIQUE_CONTENT } from "@/app/_components/content/StackTechniqueContent"
 
 export const StackTechnique = () => {
   return (

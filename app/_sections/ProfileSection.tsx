@@ -13,7 +13,7 @@ export const ProfileSection = () => {
     >
       <div className="relative z-10 container mx-auto mt-24 flex flex-row gap-3 px-6 md:flex-row-reverse">
         <Image
-          className={"mx-auto h-96 w-96 flex-shrink-0 rounded-full"}
+          className={"mx-auto h-96 w-96 shrink-0 rounded-full"}
           src="/laura.jpeg"
           width={256}
           height={256}

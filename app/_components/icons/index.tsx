@@ -1,0 +1,5 @@
+export * from "./ReactIcon"
+export * from "./TypeScriptIcon"
+export * from "./NextIcon"
+export * from "./ReactQueryIcon"
+export * from "./TailwindCssIcon"

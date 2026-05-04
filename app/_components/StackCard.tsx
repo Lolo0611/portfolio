@@ -13,7 +13,7 @@ export const StackCard = ({ width, height, content }: StackCardProps) => {
       ></div>
       <div
         style={{ width, height }}
-        className="bg-medium-purple relative flex rounded-lg p-2 text-slate-300"
+        className="bg-light-purple relative flex rounded-lg p-2 text-slate-300"
       >
         {content}
       </div>
