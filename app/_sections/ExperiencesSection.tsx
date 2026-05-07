@@ -76,62 +76,67 @@ const EXPERIENCES = [
 
 export const ExperiencesSection = () => {
   return (
-    <section id={id.EXPERIENCE}>
+    <section id={id.EXPERIENCE} className="overflow-x-hidden">
       <div className="bg-purple pb-7 text-white">
-        <div
-          className={
-            "bg-purple top-20 z-10 py-2 text-center md:sticky md:mt-2 md:py-8"
-          }
-        >
+        {/* Header sticky */}
+        <div className="bg-purple top-20 z-10 py-2 text-center md:sticky md:mt-2 md:py-8">
           <SectionTitle
             title="Experiences & Formations"
             variant={SectionTitleVariants.DARK_BACKGROUND}
           />
         </div>
-        <div className="container mx-auto flex flex-col items-start md:my-12 md:flex-row">
-          <div className="top-60 mt-2 mb-5 flex w-full flex-col px-8 md:sticky md:mt-12 lg:w-1/3">
+
+        <div className="container mx-auto flex flex-col md:my-12 md:flex-row">
+          {/* LEFT PANEL */}
+          <div className="w-full px-4 md:sticky md:top-60 md:w-1/3 md:px-8">
             <p className="mb-2 text-2xl leading-normal md:text-3xl md:leading-relaxed">
               Parcours professionnel et académique
             </p>
+
             <p className="mb-4 text-sm text-gray-50 md:text-base">
               Découvrez les expériences et formations qui ont contribué à la
               construction de mes compétences et de mon parcours.
             </p>
 
             <Button
-              href={"./CV.pdf"}
-              download={"CV"}
+              href="./CV.pdf"
+              download="CV"
               variant={ButtonVariants.SECONDARY}
             >
               Télécharger CV
             </Button>
           </div>
-          <div className="ml-0 md:ml-12 lg:w-2/3">
-            <div className="container mx-auto h-full w-full">
-              <div className="wrap relative h-full px-10 pb-2">
-                <div className="border-2-2 border-yellow-555 border-#FFC100 absolute right-1/2 h-full rounded-xs border-2"></div>
-                <div className="border-2-2 border-yellow-555 border-#FFC100 absolute left-1/2 h-full rounded-xs border-2"></div>
 
+          {/* RIGHT TIMELINE */}
+          <div className="mt-10 w-full md:mt-0 md:w-2/3">
+            {/* wrapper timeline */}
+            <div className="relative px-4 md:px-10">
+              {/* center line (SAFE) */}
+              <div className="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-yellow-400" />
+
+              {/* items */}
+              <div className="flex flex-col gap-10">
                 {EXPERIENCES.map((item, index) => (
-                  <Fragment key={item.h4}>
-                    {index % 2 === 0 ? (
+                  <div
+                    key={item.h4}
+                    className={`relative flex w-full ${
+                      index % 2 === 0 ? "justify-start" : "justify-end"
+                    }`}
+                  >
+                    {/* CARD */}
+                    <div className="w-full md:w-[90%]">
                       <TimelineSection
-                        variant={VariantTimelineSection.LEFT}
+                        variant={
+                          index % 2 === 0
+                            ? VariantTimelineSection.LEFT
+                            : VariantTimelineSection.RIGHT
+                        }
                         {...item}
                       />
-                    ) : (
-                      <TimelineSection
-                        variant={VariantTimelineSection.RIGHT}
-                        {...item}
-                      />
-                    )}
-                  </Fragment>
+                    </div>
+                  </div>
                 ))}
               </div>
-              {/*<img
-                className="md:-mt-06 -mt-06 mx-auto"
-                src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
-              />*/}
             </div>
           </div>
         </div>

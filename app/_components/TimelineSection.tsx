@@ -22,8 +22,6 @@ export const TimelineSection = ({
 }: TimelineSectionProps) => {
   const { isVisible, ref } = useInView({ threshold: 0.2, rootMargin: "-50px" })
 
-  console.log("isVisible", isVisible)
-
   const base =
     "mb-5 flex w-full transform-gpu will-change-transform items-center justify-between transition-all duration-700 ease-out"
 
@@ -37,7 +35,7 @@ export const TimelineSection = ({
   return (
     <div ref={ref} className={`${base} ${isVisible ? visible : hidden}`}>
       {/* LEFT SIDE */}
-      <div className="flex w-1/2 justify-end pr-10">
+      <div className="flex w-1/2 justify-end pr-5">
         {variant === VariantTimelineSection.LEFT && (
           <div className="text-right">
             {date && (
@@ -60,7 +58,7 @@ export const TimelineSection = ({
       <div className="h-full w-px bg-white" />
 
       {/* RIGHT SIDE */}
-      <div className="flex w-1/2 justify-start pl-10">
+      <div className="flex w-1/2 justify-start pl-5">
         {variant === VariantTimelineSection.RIGHT && (
           <div className="text-left">
             {date && (

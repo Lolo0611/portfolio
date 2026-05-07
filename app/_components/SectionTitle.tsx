@@ -28,7 +28,7 @@ export const SectionTitle = ({
   return (
     <div className={`relative`}>
       <h2
-        className={`${sectionTitleVariants[variant].h2} font-londrina text-7xl tracking-wider`}
+        className={`${sectionTitleVariants[variant].h2} font-londrina text-5xl tracking-wider md:text-7xl`}
       >
         {title.toUpperCase()}
       </h2>

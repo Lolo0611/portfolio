@@ -9,11 +9,11 @@ export const ProfileSection = () => {
   return (
     <section
       id={id.PROFILE}
-      className="bg-light-purple text-grey relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="bg-light-purple text-grey relative flex items-center justify-center overflow-hidden"
     >
-      <div className="relative z-10 container mx-auto mt-24 flex flex-row gap-3 px-6 md:flex-row-reverse">
+      <div className="relative z-10 container mx-auto flex flex-col gap-3 px-3 py-6 md:mt-24 md:flex-row-reverse md:px-6">
         <Image
-          className={"mx-auto h-96 w-96 shrink-0 rounded-full"}
+          className={"mx-auto h-32 w-32 shrink-0 rounded-full md:h-96 md:w-96"}
           src="/laura.jpeg"
           width={256}
           height={256}
@@ -21,13 +21,15 @@ export const ProfileSection = () => {
           style={{ objectFit: "cover" }}
         />
         <div className="flex flex-col gap-8">
-          <h1 className="font-regular text-4xl">
+          <h1 className="font-regular text-2xl md:text-4xl">
             Bonjour, Je suis{" "}
             <span className={"text-purple font-bold"}>Laura SCOLAN</span>
             <br />
-            <span className={"text-4xl"}>
+            <span className={"text-2xl md:text-4xl"}>
               Développeuse{" "}
-              <span className={"text-purple text-4xl font-semibold"}>
+              <span
+                className={"text-purple text-2xl font-semibold md:text-4xl"}
+              >
                 Web Front-end spécialisée en React et Next.js
               </span>
             </span>

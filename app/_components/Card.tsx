@@ -27,7 +27,7 @@ export const Card = ({
   return (
     <div
       className={
-        "group bg-very-light-purple border-medium-purple hover:border-purple hover:bg-medium-purple/50 flex h-128.5 w-97.5 flex-col overflow-hidden rounded-md text-left text-black transition-colors duration-300"
+        "group bg-very-light-purple border-medium-purple hover:border-purple hover:bg-medium-purple/50 flex h-128.5 w-full flex-col overflow-hidden rounded-md text-left text-black transition-colors duration-300 md:w-97.5"
       }
     >
       <div className="h-56.25 w-full shrink-0 overflow-hidden">

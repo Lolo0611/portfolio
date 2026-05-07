@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import { navItems, sections } from "@/app/_components/navigation/section"
 
 export const Footer = () => {
@@ -6,8 +6,8 @@ export const Footer = () => {
 
   return (
     <footer className="bg-purple mx-auto border-t text-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="mb-8 grid gap-8 md:grid-cols-4">
+      <div className="container mx-auto py-12">
+        <div className="mb-8 grid gap-8 px-6 md:grid-cols-4 md:px-0">
           <div>
             <h3 className="mb-4 font-bold text-white">Laura Scolan</h3>
             <p className="text-sm text-white">
